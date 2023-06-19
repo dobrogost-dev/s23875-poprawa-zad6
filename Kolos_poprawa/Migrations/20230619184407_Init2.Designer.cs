@@ -4,6 +4,7 @@ using Kolos_poprawa.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kolos_poprawa.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20230619184407_Init2")]
+    partial class Init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,7 +128,7 @@ namespace Kolos_poprawa.Migrations
                         new
                         {
                             IdPatient = 1,
-                            Birthdate = new DateTime(2023, 6, 19, 20, 53, 16, 260, DateTimeKind.Local).AddTicks(9068),
+                            Birthdate = new DateTime(2023, 6, 19, 20, 44, 7, 875, DateTimeKind.Local).AddTicks(9405),
                             FirstName = "Janusz",
                             LastName = "Tracz"
                         });
@@ -163,8 +166,8 @@ namespace Kolos_poprawa.Migrations
                         new
                         {
                             IdPrescription = 1,
-                            Date = new DateTime(2023, 6, 19, 20, 53, 16, 260, DateTimeKind.Local).AddTicks(8918),
-                            DueDate = new DateTime(2023, 6, 19, 20, 53, 16, 260, DateTimeKind.Local).AddTicks(8988),
+                            Date = new DateTime(2023, 6, 19, 20, 44, 7, 875, DateTimeKind.Local).AddTicks(9319),
+                            DueDate = new DateTime(2023, 6, 19, 20, 44, 7, 875, DateTimeKind.Local).AddTicks(9370),
                             IdDoctor = 1,
                             IdPatient = 1
                         });
